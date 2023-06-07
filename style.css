@@ -27,8 +27,61 @@ body {
     padding: 0 7rem; 
 }
 
-.navbar .btn {
-    width: 8rem;
+.dropdown li {
+    list-style-type: none;
+    margin: 1rem 0;
+}
+
+.dropdown ul {
+    padding: 0 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.dropdown {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 58px;
+    right: 0;
+    height: 100vh;
+    width: 40%;
+    padding: 15px;
+    z-index: 1;
+}
+
+.dropdown.active {
+    display: block;
+}
+
+.dropdown .btn {
+    margin: 8px auto;
+    width: 100%;
+}
+
+.menu {
+    position: relative;
+    display: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.menu .close-menu {
+    display: none;
+    position: absolute;
+    top: -14px;
+    right: 5px;
+}
+
+.menu .close-menu.active {
+    display: block;
 }
 
 .nav {
@@ -133,4 +186,151 @@ button {
 
 .left .btn {
     width: 12rem;
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .navbar {
+        padding: 0 2rem;
+    }
+
+    .content {
+        /* flex-direction: column-reverse; */
+        gap: 4rem;
+        padding-top: 1.5rem;
+    }
+
+    .right .empty {
+        width: 100%;
+        left: 0;
+    }
+
+    .left h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 867px) {
+    .nav {
+        gap: 1.5rem;
+    }
+
+    .nav a{
+        font-size: 1rem;
+    }
+
+    .content {
+        gap: 1rem;
+    }
+    .left .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 58px;
+    }
+
+    .navbar .btn {
+        width: 5rem;
+    }
+
+    .nav {
+        gap: 1rem;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    .left {
+        width: 100%;
+    }   
+
+    .right {
+        width: 100%;
+    }
+
+    .right img {
+        justify-self: center;
+        height: 500px;
+    }
+
+    .right .empty {
+        width: 100%;
+        left: 0;
+        top: 24rem;
+    }
+
+    .left h1 {
+        font-size: 2.5rem;
+    }
+
+    .left p {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .left .btn {
+        width: 50%;
+        margin: auto 0;
+    }
+
+    .sign-in2 .btn {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .navbar .btn {
+        width: 8rem;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .sign-in.lg {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .content {
+        gap: 1rem;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+    }
+
+    .left p {
+        font-size: 16px;
+    }
+
+    .left .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .sign-in2 .btn {
+        margin: 5px 0;
+    }
 }
